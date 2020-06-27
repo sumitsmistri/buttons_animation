@@ -1,0 +1,190 @@
+body {
+    background: #5299e4;
+    height: 100vh;
+}
+.all_buttons {
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.all_buttons .each_button_holder {
+    width: 33.333%;
+    margin: 30px 0;
+    text-align: center;
+}
+.all_buttons .each_button_holder .btn {
+    padding: 15px 100px;
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* -------- Button 1 -------- */
+
+.all_buttons .each_button_holder .btn1:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -1;
+    background-color: #000;
+    transform: scaleY(.3);
+    opacity: 0;
+    transition: all .3s;
+}
+.all_buttons .each_button_holder .btn1:hover {
+    color: blue;
+}
+.all_buttons .each_button_holder .btn1:hover:before {
+    opacity: 1;
+    background-color: #fff;
+    transform: scaleY(1);
+    transition: transform .6s cubic-bezier(0.08, 0.35, 0.13, 1.02), opacity .4s;
+}
+
+/* -------- Button 2 -------- */
+
+
+.all_buttons .each_button_holder .btn2:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -1;
+    background-color: #000;
+    transform: scaleX(.3);
+    opacity: 0;
+    transition: all .3s;
+}
+.all_buttons .each_button_holder .btn2:hover {
+    color: blue;
+}
+.all_buttons .each_button_holder .btn2:hover:before {
+    opacity: 1;
+    background-color: #fff;
+    transform: scaleX(1);
+    transition: transform .6s cubic-bezier(0.08, 0.35, 0.13, 1.02), opacity .4s;
+}
+/* -------- Button 3 -------- */
+
+.all_buttons .each_button_holder .btn3:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    display: block;
+    background-color: blue;
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+
+}
+.all_buttons .each_button_holder .btn3:hover:before {
+    transform-origin: left top;
+    transform: scale(1, 1);    
+}
+/* -------- Button 4 -------- */
+
+.all_buttons .each_button_holder .btn4:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -1;
+    background-color: transparent;
+    box-shadow: inset 0px 0px 0px rgba(122, 10, 10, 0.699);
+    transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+
+}
+.all_buttons .each_button_holder .btn4:hover:before {
+    box-shadow: inset 300px 0px 0px #1951b9;  
+}
+/* -------- Button 5 -------- */
+
+.all_buttons .each_button_holder .btn5 {
+    border: 2px solid transparent;
+    transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+}
+.all_buttons .each_button_holder .btn5:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    display: block;
+    z-index: -1;
+    background-color: #1951b9;
+    box-shadow: inset 0px 0px 0px #1951b9;
+    transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+
+}
+.all_buttons .each_button_holder .btn5:hover:before,
+.all_buttons .each_button_holder .btn5:hover:after {
+    width: 100%; 
+}
+.all_buttons .each_button_holder .btn5:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0%;
+    height: 2px;
+    display: block;
+    z-index: -1;
+    background-color: #1951b9;
+    transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+
+}
+.all_buttons .each_button_holder .btn5:hover {
+    border-left: 2px solid #1951b9;
+    border-right: 2px solid #1951b9;
+}
+
+/* -------- Button 6 -------- */
+.all_buttons .each_button_holder .btn6 {
+    letter-spacing: 0;
+    top: -27px;
+}
+.all_buttons .each_button_holder .btn6:before,
+.all_buttons .each_button_holder .btn6:after {
+    content: "";
+    backface-visibility: hidden;
+    border: 2px solid transparent;
+    bottom: 0;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 400ms ease-in-out;
+    width: 0;
+}
+.all_buttons .each_button_holder .btn6:hover:before {
+    bottom: auto;
+    top: -5px;
+}
+.all_buttons .each_button_holder .btn6:hover:after {
+    bottom: -5px;
+}
+.all_buttons .each_button_holder .btn6:hover:before,
+.all_buttons .each_button_holder .btn6:hover:after {
+    backface-visibility: hidden;
+    border-color: #fff;
+    transition: width 400ms ease-in-out;
+    width: 70%;
+}
